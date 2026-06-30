@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FAST BITE - Tu pedido está listo</title>
+
+<style>
+body{
+    margin:0;
+    font-family:Arial,Helvetica,sans-serif;
+    background:#c62828;
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+.caja{
+    background:white;
+    color:#222;
+    width:90%;
+    max-width:700px;
+    border-radius:20px;
+    padding:30px;
+    text-align:center;
+    box-shadow:0 0 30px rgba(0,0,0,.3);
+}
+
+h1{
+    color:#d32f2f;
+    margin-bottom:10px;
+}
+
+h2{
+    color:#ff9800;
+}
+
+button{
+    background:#ff9800;
+    color:white;
+    border:none;
+    padding:15px 35px;
+    font-size:20px;
+    border-radius:50px;
+    cursor:pointer;
+    margin-top:20px;
+}
+
+button:hover{
+    transform:scale(1.05);
+}
+
+video{
+    width:100%;
+    border-radius:15px;
+    margin-top:20px;
+    display:none;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="caja">
+
+<h1>🍔 FAST BITE 🍟</h1>
+
+<h2>Tu pedido está listo</h2>
+
+<p>
+Nuestro chef ha preparado un ingrediente secreto
+para una persona muy especial ❤️
+</p>
+
+<button onclick="mostrarVideo()">
+▶️ Comenzar
+</button>
+
+<video id="video" controls>
+<source src="VIDEO.mp4" type="video/mp4">
+</video>
+
+</div>
+
+<script>
+
+function mostrarVideo(){
+
+document.querySelector("button").style.display="none";
+
+let video=document.getElementById("video");
+
+video.style.display="block";
+
+video.play();
+
+}
+
+</script>
+
+</body>
+</html>
