@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SWEET DESSERT - El momento más dulce</title>
+
+<style>
+body{
+    margin:0;
+    font-family:Arial,Helvetica,sans-serif;
+    background:#ad1457; /* Fondo color frambuesa romántico */
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+.caja{
+    background:white;
+    color:#222;
+    width:90%;
+    max-width:700px;
+    border-radius:20px;
+    padding:30px;
+    text-align:center;
+    box-shadow:0 0 30px rgba(0,0,0,.3);
+}
+
+h1{
+    color:#ad1457;
+    margin-bottom:10px;
+}
+
+h2{
+    color:#ff4081;
+}
+
+p{
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+button{
+    background:#ff4081;
+    color:white;
+    border:none;
+    padding:15px 35px;
+    font-size:20px;
+    border-radius:50px;
+    cursor:pointer;
+    margin-top:20px;
+    transition: transform 0.2s;
+}
+
+button:hover{
+    transform:scale(1.05);
+}
+
+video{
+    width:100%;
+    border-radius:15px;
+    margin-top:20px;
+    display:none;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="caja">
+
+<h1>🍰 SWEET DESSERT 🍓</h1>
+
+<h2>El momento más dulce</h2>
+
+<p>
+Para terminar esta dinner, ahora de postre el chef ha preparado la gran especialidad de la casa... 
+Una sorpresa muy exclusiva para la persona que hace mi vida más dulce. ❤️
+</p>
+
+<button onclick="mostrarVideo()">
+▶️ Servir el postre
+</button>
+
+<video id="video" controls>
+<source src="POSTRE.mp4" type="video/mp4">
+Tu navegador no soporta el vídeo.
+</video>
+
+</div>
+
+<script>
+
+function mostrarVideo(){
+
+document.querySelector("button").style.display="none";
+
+let video=document.getElementById("video");
+
+video.style.display="block";
+
+video.play();
+
+}
+
+</script>
+
+</body>
+</html>
